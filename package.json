@@ -28,6 +28,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "@webcomponents/webcomponentsjs": "^2.5.0",
     "lit-element": "^2.5.1"
   }
 }
