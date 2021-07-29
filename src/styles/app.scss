@@ -1,3 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Fira Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+
+  --rtg-red: #ED1C24;
+  --rtg-orange: #F26641;
+  --rtg-yellow: #FFCB05;
+  --rtg-green: #50B848;
+  --rtg-blue: #00AEEF;
+  --rtg-purple: #763F98;
+
+  // @media (prefers-color-scheme: dark) {
+  //   --rtg-orange: #CC5637;
+  //   --rtg-yellow: #E6B704;
+  //   --rtg-green: #3D8C37;
+  //   --rtg-blue: #008CBF;
+  //   --rtg-purple: #593073;
+  // }
+}
+
 * {
   box-sizing: border-box;
+}
+
+.rtg-site-nav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 .5rem;
+}
+
+$colors: 'red', 'orange', 'yellow', 'green', 'blue', 'purple';
+
+rtg-nav-item {
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  height: 10rem;
+  margin-left: .5rem;
+  margin-right: .5rem;
+  width: 10rem;
+
+  @each $color in $colors {
+    &[color="#{$color}"] {
+      background-color: var(--rtg-#{$color});
+    }
+  }
+
+  svg {
+    width: 50%;
+  }
+
+  .rtg-nav-item-text {
+    display: inline-block;
+    font-size: 1.8rem;
+    margin-top: .5rem;
+  }
 }
