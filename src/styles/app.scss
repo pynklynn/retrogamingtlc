@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
+$rtg-breakpoint: 512px;
+
 html {
   font-size: 10px;
 
@@ -39,14 +41,26 @@ body {
 
 .rtg-site-nav {
   display: flex;
+  flex-direction: column;
   justify-content: flex-end;
   margin-bottom: 1rem;
   padding: 0 0.5rem;
 
+  @media screen and (min-width: #{$rtg-breakpoint}) {
+    flex-direction: row;
+  }
+
   .rtg-header-logo {
     height: 9.5rem;
+    margin-bottom: 2.5rem;
+    margin-left: auto;
     margin-right: auto;
-    margin-top: 0.5rem;
+    margin-top: .5rem;
+
+    @media screen and (min-width: #{$rtg-breakpoint}) {
+      margin-bottom: 0;
+      margin-left: 0;
+    }
 
     .rtg-logo-st0 {
       fill: var(--rtg-red);
@@ -96,18 +110,27 @@ $colors: "red", "orange", "yellow", "green", "blue", "purple";
 
 rtg-nav-item {
   color: white;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+  margin: .5rem;
+
+  @media screen and (min-width: #{$rtg-breakpoint}) {
+    margin: 0 .5rem;
+  }
 
   a {
     align-items: center;
     color: white;
     display: inline-flex;
-    flex-direction: column;
-    height: 10rem;
-    justify-content: center;
+    height: 5rem;
+    justify-content: flex-start;
     text-decoration: none;
-    width: 10rem;
+    width: 100%;
+
+    @media screen and (min-width: #{$rtg-breakpoint}) {
+      flex-direction: column;
+      height: 10rem;
+      justify-content: center;
+      width: 10rem;
+    }
   }
 
   @each $color in $colors {
@@ -118,13 +141,25 @@ rtg-nav-item {
 
   svg {
     fill: #ffffff;
-    height: 50%;
-    width: 50%;
+    flex-grow: 0;
+    height: 70%;
+    margin: 0 1rem 0 .5rem;
+
+    @media screen and (min-width: #{$rtg-breakpoint}) {
+      height: 50%;
+      margin: 0;
+      width: 50%;
+    }
   }
 
   .rtg-nav-item-text {
     display: inline-block;
+    flex-grow: 1;
     font-size: 1.8rem;
     margin-top: 0.5rem;
+
+    @media screen and (min-width: #{$rtg-breakpoint}) {
+      flex-grow: 0;
+    }
   }
 }
