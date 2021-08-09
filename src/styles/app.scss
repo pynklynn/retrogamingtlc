@@ -62,47 +62,21 @@ body {
       margin-left: 0;
     }
 
-    .rtg-logo-st0 {
-      fill: var(--rtg-red);
+    $logo-svg-color: (0: "red", 1: "green", 2: green-dark, 3: "blue", 4: blue-dark, 5: "purple", 6: purple-dark, 7: "orange", 8: orange-dark, 9: "yellow", 10: yellow-dark);
+    @each $num, $color in $logo-svg-color {
+      .rtg-logo-st#{$num} {
+        fill: var(--rtg-#{$color});
+      }
     }
-    .rtg-logo-st1 {
-      fill: var(--rtg-green);
-    }
-    .rtg-logo-st2 {
-      fill: var(--rtg-green-dark);
-    }
-    .rtg-logo-st3 {
-      fill: var(--rtg-blue);
-    }
-    .rtg-logo-st4 {
-      fill: var(--rtg-blue-dark);
-    }
-    .rtg-logo-st5 {
-      fill: var(--rtg-purple);
-    }
-    .rtg-logo-st6 {
-      fill: var(--rtg-purple-dark);
-    }
-    .rtg-logo-st7 {
-      fill: var(--rtg-orange);
-    }
-    .rtg-logo-st8 {
-      fill: var(--rtg-orange-dark);
-    }
-    .rtg-logo-st9 {
-      fill: var(--rtg-yellow);
-    }
-    .rtg-logo-st10 {
-      fill: var(--rtg-yellow-dark);
-    }
+
     .rtg-logo-text {
       fill: #000000;
     }
-    /*@media (prefers-color-scheme: dark) {
-      .rtg-logo-text{
-        fill:#ffffff;
-      }
-    }*/
+    // @media (prefers-color-scheme: dark) {
+    //   .rtg-logo-text{
+    //     fill:#ffffff;
+    //   }
+    // }
   }
 }
 

@@ -110,50 +110,58 @@
         </g>
       </g>
     </svg>
-    <rtg-nav-item 
-      link="https://www.youtube.com/channel/UC5r8oAok_C4WZmO1nNJr2kA" 
-      color="red" 
-      icon="youtube" 
+    <rtg-nav-item
+      link="https://www.youtube.com/channel/UC5r8oAok_C4WZmO1nNJr2kA"
+      color="red"
+      icon="youtube"
       block-title="YouTube"
       title="Visit us on YouTube"
     ></rtg-nav-item>
-    <rtg-nav-item 
-      link="https://www.instagram.com/retrogamingtlc/" 
-      color="orange" 
-      icon="instagram" 
+    <rtg-nav-item
+      link="https://www.instagram.com/retrogamingtlc/"
+      color="orange"
+      icon="instagram"
       block-title="Instagram"
       title="Visit us on Instagram"
     ></rtg-nav-item>
-    <rtg-nav-item 
-      link="https://twitter.com/retrogamingtlc" 
-      color="yellow" 
-      icon="twitter" 
+    <rtg-nav-item
+      link="https://twitter.com/retrogamingtlc"
+      color="yellow"
+      icon="twitter"
       block-title="Twitter"
       title="Visit us on Twitter"
     ></rtg-nav-item>
-    <rtg-nav-item 
-      link="https://offerup.com/p/65700282" 
-      color="green" 
-      icon="offerup" 
+    <rtg-nav-item
+      link="https://offerup.com/p/65700282"
+      color="green"
+      icon="offerup"
       block-title="OfferUp"
       title="Visit our shop on OfferUp"
     ></rtg-nav-item>
-    <rtg-nav-item 
-      link="https://www.facebook.com/retrogamingtlc" 
-      color="blue" 
-      icon="facebook" 
+    <rtg-nav-item
+      link="https://www.facebook.com/retrogamingtlc"
+      color="blue"
+      icon="facebook"
       block-title="Facebook"
       title="Visit us on Facebook"
     ></rtg-nav-item>
-    <rtg-nav-item 
-      link="https://www.mercari.com/u/548499438/" 
-      color="purple" 
-      icon="mercari" 
+    <rtg-nav-item
+      link="https://www.mercari.com/u/548499438/"
+      color="purple"
+      icon="mercari"
       block-title="Mercari"
       title="Visit our shop on Mercari"
     ></rtg-nav-item>
   </nav>
-  <main></main>
+  <main>
+    <rtg-ig-feed>
+      <template>
+        <rtg-ig-post image="{{image}}">
+          {{description}}
+        </rtg-ig-post>
+      </template>
+    </rtg-ig-feed>
+  </main>
   <script src="dist/main.js"></script>
 </body>
 </html>
