@@ -5,7 +5,9 @@ $rtg-breakpoint: 512px;
 html {
   font-size: 10px;
 
-  --rtg-site-background: #efefef;
+  --rtg-light-base: #efefef;
+  --rtg-dark-base: #454545;
+  --rtg-site-background: var(--rtg-light-base);
   --rtg-red: #ed1c24;
   --rtg-orange-light: #f26641;
   --rtg-orange-dark: #CC5637;
@@ -23,25 +25,77 @@ html {
   --rtg-purple-dark: #593073;
   --rtg-purple: var(--rtg-purple-light);
 
+  color: var(--rtg-dark-base);
+
   @media (prefers-color-scheme: dark) {
-    --rtg-site-background: #454545;
+    --rtg-site-background: var(--rtg-dark-base);
     --rtg-orange: var(--rtg-orange-dark);
     --rtg-yellow: var(--rtg-yellow-dark);
     --rtg-green: var(--rtg-green-dark);
     --rtg-blue: var(--rtg-blue-dark);
     --rtg-purple: var(--rtg-purple-dark);
+
+    color: var(--rtg-light-base);
   }
 }
 
 body {
   background-color: var(--rtg-site-background);
   font-family: "Fira Sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.6rem;
   margin: 0;
   padding: 0;
+
+  @media screen and (min-width: #{$rtg-breakpoint}) {
+    font-size: 2rem;
+  }
 }
 
 * {
   box-sizing: border-box;
+}
+
+h1,
+main {
+  margin-left: 1rem;
+  margin-right: 1rem;
+
+  @media screen and (min-width: #{$rtg-breakpoint}) {
+    margin-left: auto;
+    margin-right: auto;
+    width: 980px;
+  }
+}
+
+main {
+  margin-bottom: 1rem;
+
+  @media screen and (min-width: #{$rtg-breakpoint}) {
+    margin-bottom: 2rem;
+  }
+}
+
+.rtg-site-footer {
+  font-size: 1.3rem;
+  padding: .3rem;
+  text-align: center;
+
+  @media screen and (min-width: #{$rtg-breakpoint}) {
+    font-size: 1.5rem;
+    padding: .5rem;
+  }
+}
+
+a {
+  &:hover,
+  &:focus {
+    color: var(--rtg-green);
+  }
+
+  &:active,
+  &:visited {
+    color: var(--rtg-blue);
+  }
 }
 
 .rtg-site-nav {
@@ -104,6 +158,18 @@ rtg-nav-item {
     justify-content: flex-start;
     text-decoration: none;
     width: 100%;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:visited {
+      color: white;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
 
     @media screen and (min-width: #{$rtg-breakpoint}) {
       flex-direction: column;
