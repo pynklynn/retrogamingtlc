@@ -7,25 +7,30 @@ html {
 
   --rtg-site-background: #efefef;
   --rtg-red: #ed1c24;
-  --rtg-orange: #f26641;
+  --rtg-orange-light: #f26641;
   --rtg-orange-dark: #CC5637;
-  --rtg-yellow: #ffcb05;
+  --rtg-orange: var(--rtg-orange-light);
+  --rtg-yellow-light: #ffcb05;
   --rtg-yellow-dark: #E6B704;
-  --rtg-green: #50b848;
+  --rtg-yellow: var(--rtg-yellow-light);
+  --rtg-green-light: #50b848;
   --rtg-green-dark: #3D8C37;
-  --rtg-blue: #00aeef;
+  --rtg-green: var(--rtg-green-light);
+  --rtg-blue-light: #00aeef;
   --rtg-blue-dark: #008CBF;
-  --rtg-purple: #763f98;
+  --rtg-blue: var(--rtg-blue-light);
+  --rtg-purple-light: #763f98;
   --rtg-purple-dark: #593073;
+  --rtg-purple: var(--rtg-purple-light);
 
-  // @media (prefers-color-scheme: dark) {
-  //   --rtg-site-background: #454545;
-  //   --rtg-orange: var(--rtg-orange-dark);
-  //   --rtg-yellow: var(--rtg-yellow-dark);
-  //   --rtg-green: var(--rtg-green-dark);
-  //   --rtg-blue: var(--rtg-blue-dark);
-  //   --rtg-purple: var(--rtg-purple-dark);
-  // }
+  @media (prefers-color-scheme: dark) {
+    --rtg-site-background: #454545;
+    --rtg-orange: var(--rtg-orange-dark);
+    --rtg-yellow: var(--rtg-yellow-dark);
+    --rtg-green: var(--rtg-green-dark);
+    --rtg-blue: var(--rtg-blue-dark);
+    --rtg-purple: var(--rtg-purple-dark);
+  }
 }
 
 body {
@@ -62,7 +67,7 @@ body {
       margin-left: 0;
     }
 
-    $logo-svg-color: (0: "red", 1: "green", 2: green-dark, 3: "blue", 4: blue-dark, 5: "purple", 6: purple-dark, 7: "orange", 8: orange-dark, 9: "yellow", 10: yellow-dark);
+    $logo-svg-color: (0: "red", 1: "green-light", 2: green-dark, 3: "blue-light", 4: blue-dark, 5: "purple-light", 6: purple-dark, 7: "orange-light", 8: orange-dark, 9: "yellow-light", 10: yellow-dark);
     @each $num, $color in $logo-svg-color {
       .rtg-logo-st#{$num} {
         fill: var(--rtg-#{$color});
@@ -72,11 +77,12 @@ body {
     .rtg-logo-text {
       fill: #000000;
     }
-    // @media (prefers-color-scheme: dark) {
-    //   .rtg-logo-text{
-    //     fill:#ffffff;
-    //   }
-    // }
+
+    @media (prefers-color-scheme: dark) {
+      .rtg-logo-text{
+        fill:#ffffff;
+      }
+    }
   }
 }
 
