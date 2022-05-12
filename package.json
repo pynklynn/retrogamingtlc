@@ -1,6 +1,6 @@
 {
   "name": "retrogamingtlc",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Retro Gaming TLC website",
   "main": "index.html",
   "scripts": {
@@ -19,20 +19,20 @@
   "license": "UNLICENSED",
   "private": true,
   "devDependencies": {
-    "concurrently": "^6.2.0",
-    "css-loader": "^6.2.0",
+    "concurrently": "^7.1.0",
+    "css-loader": "^6.7.1",
     "es-dev-server": "^2.1.0",
-    "sass": "^1.36.0",
-    "sass-loader": "^12.1.0",
-    "style-loader": "^3.2.1",
-    "ts-loader": "^9.2.4",
-    "typescript": "^4.3.5",
-    "webpack": "^5.46.0",
-    "webpack-cli": "^4.7.2"
+    "sass": "^1.51.0",
+    "sass-loader": "^12.6.0",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.3.0",
+    "typescript": "^4.6.4",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
   },
   "dependencies": {
-    "@webcomponents/webcomponentsjs": "^2.5.0",
+    "@webcomponents/webcomponentsjs": "^2.6.0",
     "keroseen-ui": "^0.2.1",
-    "lit-element": "^2.5.1"
+    "lit": "^2.2.3"
   }
 }

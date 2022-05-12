@@ -1,5 +1,6 @@
-import { customElement, LitElement, property, html } from 'lit-element';
-import type { TemplateResult } from 'lit-element';
+import { LitElement, html } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
+import type { TemplateResult } from 'lit';
 
 @customElement('rtg-nav-item')
 export class RtgNavItem extends LitElement {

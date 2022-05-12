@@ -1,5 +1,6 @@
-import { customElement, LitElement, html } from 'lit-element';
-import type { TemplateResult } from 'lit-element';
+import { LitElement, html } from 'lit';
+import { customElement } from 'lit/decorators.js';
+import type { TemplateResult } from 'lit';
 
 @customElement('rtg-site-footer')
 export class RtgSiteFooter extends LitElement {
