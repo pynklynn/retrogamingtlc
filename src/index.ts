@@ -7,6 +7,7 @@ import './components/nav-item.component';
 import './components/site-footer.component';
 
 import './views/home.view';
+import './views/restoration.view';
 
 import './router';
 
