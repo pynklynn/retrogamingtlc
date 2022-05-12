@@ -31,6 +31,7 @@
     "webpack-cli": "^4.9.2"
   },
   "dependencies": {
+    "@vaadin/router": "^1.7.4",
     "@webcomponents/webcomponentsjs": "^2.6.0",
     "keroseen-ui": "^0.2.1",
     "lit": "^2.2.3"
