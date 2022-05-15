@@ -177,6 +177,16 @@ export class RtgRestorationView extends LitElement {
         { name: 'Cartridge cleaning', price: '2', supplemental: 'Full cleaning of cartridge both inside out including removing price/old owner/business stickers and marker (when possible and unless otherwise directed)' },
         { name: 'Cartridge battery replacement', price: '3', supplemental: 'Very few games from the Game Gear use a battery to save but some do - existing game saves will be lost if replaced and existing battery still works' }
       ]
+    },
+    {
+      system: 'Others',
+      items: [
+        { name: 'Xbox One/Series X|S controller cleaning', price: '12', supplemental: 'Full cleaning of the controllers' },
+        { name: 'PlayStation 4 controller cleaning', price: '12', supplemental: 'Full cleaning of the controllers (we do not yet offer PS5 controller services)' },
+        { name: 'Xbox One/Series X|S thumb stick replacement (price per thumb stick)', price: '6', supplemental: 'Replacement to fix stick drift - only available on OEM controllers and requires controller cleaning at normal rate' },
+        { name: 'Switch joy-con thumb stick replacement (price per thumb stick)', price: '6', supplemental: 'Replacement to fix stick drift - only available on OEM controllers and requires controller cleaning at normal rate' },
+        { name: 'Switch joy-con shell replacement (price per joy-cons)', price: '6', supplemental: 'Shell provided by customer' }
+      ]
     }
   ];
 }
